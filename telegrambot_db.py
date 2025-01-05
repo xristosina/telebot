@@ -98,3 +98,5 @@ def handle_text(message):
     else:
         bot.send_message(message.from_user.id, "Я тебя не понимаю. Выбери существующую команду.")
 
+keep_alive() #запускаем flask-сервер в отдельном потоке.
+bot.polling(non_stop=True, interval=0) #запуск бота
